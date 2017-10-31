@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">HSV Color Picker</string>
+    <string name="hue">Hue</string>
+    <string name="sat">Saturation</string>
+    <string name="value">Value/Brightness</string>
+    <string name="action_about">About</string>
+    <string name="author">Michel Toutain(tout0004)</string>
+
+    <string name="hueProgress">Hue: %1d</string>
+    <string name="saturationProgress">Saturation: %1d</string>
+    <string name="valueProgress">Value: %1d</string>
+</resources>

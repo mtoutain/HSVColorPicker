@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.algonquincollege.tout0004.hsvcolorpicker.MainActivity">
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="190dp"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/colorSwatch"
+        android:background="#000"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/hue"
+
+        android:id="@+id/frameLayout">
+
+        <ImageView
+            android:id="@+id/kirby"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="192dp"
+            android:layout_above="@+id/hue"
+            android:layout_alignParentStart="true"
+            android:layout_toEndOf="@+id/valueBrightness"
+            android:src="@drawable/kirby" />
+        <ImageView
+            android:id="@+id/kirbyMask"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="192dp"
+            android:layout_above="@+id/hue"
+            android:layout_alignParentStart="true"
+            android:layout_toEndOf="@+id/valueBrightness"
+            android:src="@drawable/kirbymask" />
+    </FrameLayout>
+
+    <TextView
+        style="@style/font"
+        android:id="@+id/hue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/colorSwatch"
+        android:layout_marginTop="16dp"
+        android:text="Hue" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/hue"
+        android:id="@+id/frameLayout2">
+
+
+        <ImageView
+            android:id="@+id/hueImage"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/gradient_hue" />
+
+        <SeekBar
+            android:id="@+id/hueSB"
+            android:layout_width="fill_parent"
+            android:layout_height="32dp"
+            android:max="359" />
+    </FrameLayout>
+
+    <TextView
+        style="@style/font"
+        android:id="@+id/saturation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/frameLayout2"
+        android:layout_marginTop="14dp"
+        android:text="Saturation" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/saturation"
+        android:id="@+id/frameLayout3">
+
+        <ImageView
+            android:id="@+id/satImage"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/gradient_saturation" />
+
+        <SeekBar
+            android:id="@+id/saturationSB"
+            android:layout_width="fill_parent"
+            android:layout_height="32dp"
+            android:max="100" />
+    </FrameLayout>
+
+    <TextView
+        style="@style/font"
+        android:id="@+id/valueBrightness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/frameLayout3"
+        android:layout_marginTop="10dp"
+        android:text="Value/Brightness" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/valueBrightness"
+        android:id="@+id/frameLayout4">
+
+        <ImageView
+            android:id="@+id/valueImage"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/gradient_brightness" />
+
+        <SeekBar
+            android:id="@+id/valueSB"
+            android:layout_width="fill_parent"
+            android:layout_height="32dp"
+            android:max="100" />
+    </FrameLayout>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/frameLayout4"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="19dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <Button
+                style="@style/button"
+                android:id="@+id/blackButton"
+                android:background="@color/black" />
+
+            <Button
+                style="@style/button"
+                android:id="@+id/redButton"
+                android:background="@color/red" />
+
+            <Button
+                style="@style/button"
+                android:id="@+id/limeButton"
+                android:background="@color/lime" />
+            <Button
+                style="@style/button"
+                android:id="@+id/blueButton"
+                android:background="@color/blue" />
+            <Button
+                style="@style/button"
+                android:id="@+id/yellowButton"
+                android:background="@color/yellow" />
+            <Button
+                style="@style/button"
+                android:id="@+id/cyanButton"
+                android:background="@color/cyan" />
+            <Button
+                style="@style/button"
+                android:id="@+id/magentaButton"
+                android:background="@color/magenta" />
+            <Button
+                style="@style/button"
+                android:id="@+id/silverButton"
+                android:background="@color/silver" />
+            <Button
+                style="@style/button"
+                android:id="@+id/grayButton"
+                android:background="@color/gray" />
+            <Button
+                style="@style/button"
+                android:id="@+id/maroonButton"
+                android:background="@color/maroon" />
+            <Button
+                style="@style/button"
+                android:id="@+id/oliveButton"
+                android:background="@color/olive" />
+            <Button
+                style="@style/button"
+                android:id="@+id/greenButton"
+                android:background="@color/green" />
+            <Button
+                style="@style/button"
+                android:id="@+id/purpleButton"
+                android:background="@color/purple" />
+            <Button
+                style="@style/button"
+                android:id="@+id/tealButton"
+                android:background="@color/teal" />
+            <Button
+                style="@style/button"
+                android:id="@+id/navyButton"
+                android:background="@color/navy" />
+
+        </LinearLayout>
+
+
+    </HorizontalScrollView>
+
+
+
+
+</RelativeLayout>
+
+
+
